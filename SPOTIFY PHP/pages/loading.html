@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Spotify Loading</title>
+  <style>
+    body {
+      background-color: #121212;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-top: 1.5rem;
+      margin: 0;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    .container {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #9ca3af; /* gray-400 */
+      opacity: 0.4;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes pulseOne {
+      0%, 100% {
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    @keyframes pulseTwo {
+      0%, 100% {
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    @keyframes pulseThree {
+      0%, 100% {
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    .pulse-one {
+      animation-name: pulseOne;
+      animation-delay: 0s;
+    }
+    .pulse-two {
+      animation-name: pulseTwo;
+      animation-delay: 0.5s;
+    }
+    .pulse-three {
+      animation-name: pulseThree;
+      animation-delay: 1s;
+    }
+  </style>
+</head>
+<body>
+  <img
+    alt="Spotify logo in white on black background"
+    src="https://storage.googleapis.com/a1aa/image/52045942-bd4b-452e-7958-f66deab6ac8e.jpg"
+    width="24"
+    height="24"
+  />
+  <div class="container">
+    <div class="dots">
+      <span class="dot pulse-one"></span>
+      <span class="dot pulse-two"></span>
+      <span class="dot pulse-three"></span>
+    </div>
+  </div>
+</body>
+</html>
